@@ -9,12 +9,18 @@
     "#reached",
     "#targeted",
     "#population",
+    "#indicator+num",
+    "#impact+num",
+    "#output+num",
     "#country",
     "#adm1",
     "#adm2",
     "#adm3",
     "#adm4",
     "#adm5",
+    "#sector",
+    "#subsector",
+    "#org",
     "#date+year"
   ],
   "recipes": [
@@ -33,14 +39,21 @@
           "#adm2",
           "#adm3",
           "#adm4",
-          "#adm5"
+          "#adm5",
+          "#sector",
+          "#subsector",
+          "#org"
         ],
         "valueColumns": [
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#population",
+          "#indicator+num",
+          "#impact+num",
+          "#output+num"
+
         ]
       }
     },
@@ -56,7 +69,10 @@
           "#country"
         ],
         "valueColumns": [
-          "#adm1"
+          "#adm1",
+          "#sector",
+          "#subsector",
+          "#org"
         ]
       }
     },
@@ -71,14 +87,21 @@
         ],
         "aggregateColumns": [
           "#date",
-          "#country"
+          "#country",
+          "#adm1",
+          "#sector",
+          "#subsector",
+          "#org"
         ],
         "valueColumns": [
           "#affected",
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#population",
+          "#indicator+num",
+          "#impact+num",
+          "#output+num"
         ]
       }
     },
@@ -96,7 +119,11 @@
           "#inneed",
           "#reached",
           "#targeted",
-          "#population"
+          "#population",
+          "#indicator+num",
+          "#impact+num",
+          "#output+num"
+
         ]
       }
     },
@@ -110,7 +137,10 @@
         ],
         "valueColumns": [
           "#country",
-          "#adm1"
+          "#adm1",
+          "#sector",
+          "#subsector",
+          "#org"
         ]
       }
     }
