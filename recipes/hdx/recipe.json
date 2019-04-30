@@ -11,6 +11,7 @@
     "#population",
     "#indicator+num",
     "#impact+num",
+    "#event+num",
     "#output+num",
     "#country",
     "#adm1",
@@ -52,6 +53,7 @@
           "#population",
           "#indicator+num",
           "#impact+num",
+          "#event+num",
           "#output+num"
 
         ]
@@ -101,6 +103,7 @@
           "#population",
           "#indicator+num",
           "#impact+num",
+          "#event+num",
           "#output+num"
         ]
       }
@@ -122,6 +125,7 @@
           "#population",
           "#indicator+num",
           "#impact+num",
+          "#event+num",
           "#output+num"
 
         ]
