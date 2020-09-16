@@ -1,0 +1,121 @@
+{
+  "name": "UNHCR",
+  "title": "UNHCR - forcibly-displaced persons and stateless persons",
+  "type": "cookbook",
+  "columns": [
+    "#date",
+    "#affected+resettled"
+  ],
+  "recipes": [
+    {
+      "name": "Total incoming by year",
+      "description": "Total number of people displaced into the country.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected+resettled+incoming"
+        ]
+      }
+    },
+    {
+      "name": "Total outgoing by year",
+      "description": "Total number of people displaced out of the country.",
+      "type": "timeseries",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#date+year"
+        ],
+        "valueColumns": [
+          "#affected+resettled+outgoing"
+        ]
+      }
+    },
+    {
+      "name": "Total incoming (latest year)",
+      "description": "Total number of people displaced into the country in the latest year.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "valueColumns": [
+          "#affected+resettled+incoming"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Total outgoing (latest year)",
+      "description": "Total number of people displaced out of the country in the latest year.",
+      "type": "key figure",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "valueColumns": [
+          "#affected+resettled+outgoing"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Total incoming (latest year) by country of origin",
+      "description": "Total number of displaced people coming into the country in the latest year.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+origin+code"
+        ],
+        "valueColumns": [
+          "#affected+resettled+incoming"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Total outgoing population (latest year) by country of asylum",
+      "description": "Total number of displaced people leaving the country in the latest year.",
+      "type": "chart",
+      "ingredients": {
+        "aggregateFunctions": [
+          "sum"
+        ],
+        "aggregateColumns": [
+          "#country+asylum+code"
+        ],
+        "valueColumns": [
+          "#affected+resettled+outgoing"
+        ],
+        "filtersWith": [
+          {
+            "#date+year": "$MAX$"
+          }
+        ]
+      }
+    }
+  ]
+}
