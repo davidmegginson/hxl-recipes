@@ -79,12 +79,15 @@
       "name": "Total incoming (latest year) by country of origin",
       "description": "Total number of displaced people coming into the country in the latest year.",
       "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
         "aggregateColumns": [
-          "#country+origin+code"
+          "#country+origin"
         ],
         "valueColumns": [
           "#affected+resettled+incoming"
@@ -100,12 +103,15 @@
       "name": "Total outgoing population (latest year) by country of asylum",
       "description": "Total number of displaced people leaving the country in the latest year.",
       "type": "chart",
+      "options": {
+        "forcedChartType": "bar"
+      },
       "ingredients": {
         "aggregateFunctions": [
           "sum"
         ],
         "aggregateColumns": [
-          "#country+asylum+code"
+          "#country+asylum"
         ],
         "valueColumns": [
           "#affected+resettled+outgoing"
